@@ -1,0 +1,88 @@
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+
+$informoGreen: #417D44;
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #333;
+$headingColor: $informoGreen;
+
+$mainFontSize: 42px;
+$mainFont: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
+$headingFont: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
+// $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+// $headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$linkColor: darken($informoGreen, 10%);
+$linkColorHover: $informoGreen;
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+
+.reveal {
+	strong {
+		color: darken($informoGreen, 10%);
+	}
+	img.plain {
+		background: none;
+	}
+	blockquote {
+		background-color: lighten( $informoGreen, 50% );
+	}
+	aside.controls > button {
+		font-size: 7px;
+	}
+}
+
+body > footer {
+	position: absolute;
+	width: 100%;
+	bottom: 10px;
+	z-index: 100;
+
+	padding-left: 1rem;
+
+	text-align: left;
+
+	color: $mainColor;
+	font-family: $mainFont;
+	font-size: 4vh;
+
+	a {
+		color: $linkColor;
+		text-decoration: none;
+	}
+}
