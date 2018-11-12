@@ -15,7 +15,7 @@ body {
   background-color: #fff; }
 
 .reveal {
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 42px;
   font-weight: normal;
   color: #333; }
@@ -46,11 +46,11 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #417D44;
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
-  text-transform: none;
+  text-transform: uppercase;
   text-shadow: none;
   word-wrap: break-word; }
 
@@ -279,21 +279,33 @@ body {
   background: none; }
 
 .reveal blockquote {
-  background-color: #d4e9d5; }
+  background-color: rgba(145, 198, 148, 0.2); }
+
+.reveal :not(pre) > code {
+  font-size: 0.8em;
+  padding: 0.1em 0.3em;
+  background-color: rgba(145, 198, 148, 0.2);
+  border-radius: 5px;
+  border: 1px #ccc solid; }
 
 .reveal aside.controls > button {
   font-size: 7px; }
 
-body > footer {
+.reveal > footer {
   position: absolute;
   width: 100%;
   bottom: 10px;
   z-index: 100;
   padding-left: 1rem;
   text-align: left;
-  color: #333;
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
   font-size: 4vh; }
-  body > footer a {
-    color: #305b32;
-    text-decoration: none; }
+
+.reveal.has-dark-background strong {
+  color: #fff; }
+
+.reveal.has-dark-background > footer {
+  color: #fff; }
+  .reveal.has-dark-background > footer a {
+    color: #fff; }
+    .reveal.has-dark-background > footer a:hover {
+      color: #d4e9d5; }

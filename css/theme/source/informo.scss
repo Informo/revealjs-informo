@@ -24,13 +24,11 @@ $mainColor: #333;
 $headingColor: $informoGreen;
 
 $mainFontSize: 42px;
-$mainFont: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
-$headingFont: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif;
-// $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
-// $headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
-$headingTextTransform: none;
+$headingTextTransform: uppercase;
 $linkColor: darken($informoGreen, 10%);
 $linkColorHover: $informoGreen;
 $selectionBackgroundColor: lighten( $linkColor, 25% );
@@ -60,29 +58,43 @@ section.has-dark-background {
 		background: none;
 	}
 	blockquote {
-		background-color: lighten( $informoGreen, 50% );
+		background-color: transparentize(lighten($informoGreen, 30%), 0.8);
 	}
+	:not(pre) > code {
+		font-size: 0.8em;
+		padding: 0.1em 0.3em;
+		background-color: transparentize(lighten($informoGreen, 30%), 0.8);
+		border-radius: 5px;
+		border: 1px #ccc solid;
+	}
+
 	aside.controls > button {
 		font-size: 7px;
 	}
-}
+	> footer {
+		position: absolute;
+		width: 100%;
+		bottom: 10px;
+		z-index: 100;
 
-body > footer {
-	position: absolute;
-	width: 100%;
-	bottom: 10px;
-	z-index: 100;
+		padding-left: 1rem;
 
-	padding-left: 1rem;
+		text-align: left;
+		font-size: 4vh;
+	}
 
-	text-align: left;
-
-	color: $mainColor;
-	font-family: $mainFont;
-	font-size: 4vh;
-
-	a {
-		color: $linkColor;
-		text-decoration: none;
+	&.has-dark-background {
+		strong {
+			color: #fff;
+		}
+		> footer {
+			color: #fff;
+			a {
+				color: #fff;
+				&:hover {
+					color: lighten($linkColorHover, 50%);
+				}
+			}
+		}
 	}
 }
