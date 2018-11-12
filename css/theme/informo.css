@@ -303,9 +303,10 @@ body {
 .reveal.has-dark-background strong {
   color: #fff; }
 
+.reveal.has-dark-background a {
+  color: #fff; }
+  .reveal.has-dark-background a:hover {
+    color: #d4e9d5; }
+
 .reveal.has-dark-background > footer {
   color: #fff; }
-  .reveal.has-dark-background > footer a {
-    color: #fff; }
-    .reveal.has-dark-background > footer a:hover {
-      color: #d4e9d5; }
