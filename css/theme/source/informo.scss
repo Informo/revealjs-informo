@@ -71,6 +71,11 @@ section.has-dark-background {
 	aside.controls > button {
 		font-size: 7px;
 	}
+	.slide-number {
+		top: 8px;
+		right: 8px;
+		bottom: auto;
+	}
 	> footer {
 		position: absolute;
 		width: 100%;
